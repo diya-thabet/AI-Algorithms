@@ -1,1 +1,1 @@
-print('hello')
+print('hello to neural networks lab')
