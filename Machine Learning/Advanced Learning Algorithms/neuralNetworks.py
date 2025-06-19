@@ -1,1 +1,0 @@
-print('hello to neural networks lab')
