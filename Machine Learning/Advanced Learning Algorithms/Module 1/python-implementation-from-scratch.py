@@ -1,5 +1,11 @@
 import numpy as np
 import math
+
+W1 = np.array( [[-8.93,  0.29, 12.9 ], [-0.1,  -7.32, 10.81]] )
+b1 = np.array( [-9.82, -9.28,  0.96] )
+W2 = np.array( [[-31.18], [-27.59], [-32.56]] )
+b2 = np.array( [15.41] ) 
+
 #sigmoid function
 def sigmoid(x):
     return 1 / (1 + math.exp(-x))
@@ -19,7 +25,7 @@ def dense(a_in, W, b):
 def sequential(x):
     a1 = dense(x,W1,b1)
     a2 = dense(a1,W2,b2)
-    a3 = dense(a2,W3,b3)
-    a4 = dense(a3,W4,b4)
-    f_x = a4
+    f_x = a2
     return f_x
+
+print(sequential())
